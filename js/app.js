@@ -234,13 +234,7 @@ function cerrarBarra(){
    
 });
 
-if ('serviceWorker' in navigator){
-    window.addEventListener('load', () =>{
-        navigator.serviceWorker.register('..//sw.js'.then)(() =>{
-            console.log('Service Worker Registered')
-        });
-    });
-}
+
 function leerM()
 {
 let datosLM = new FormData();
@@ -331,3 +325,10 @@ function cerrarSesion(){
     document.getElementById("ingreso").style.display ="block";
 }
 
+if ('serviceWorker' in navigator){
+    window.addEventListener('load', () =>{
+        navigator.serviceWorker.register('..//sw.js'.then)(() =>{
+            console.log('Service Worker Registered')
+        });
+    });
+}
