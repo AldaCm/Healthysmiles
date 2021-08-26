@@ -230,6 +230,14 @@ function cerrarBarra(){
     .catch(function(err){
             alert("Ocurrio un error --> " + err);
     });
+
+    if ('serviceWorker' in navigator){
+        window.addEventListener('load', () =>{
+            navigator.serviceWorker.register('..//sw.js'.then)(() =>{
+                console.log('Service Worker Registered')
+            });
+        });
+    }
 });
 function leerM()
 {
